@@ -71,13 +71,13 @@
               <a class="nav-link" href="./gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="./aboutus.html">About</a>
+              <a class="nav-link" href="./aboutus.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./contact.html">Contact</a>
             </li>
             <li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0">
-              <a class="nav-link" href="myBooking.html" target="_blank"
+              <a class="nav-link active" href="myBooking.html" target="_blank"
                 ><span class="pb_rounded-4 px-4 rounded">My Booking</span></a
               >
             </li>
@@ -86,32 +86,60 @@
       </div>
     </nav>
     <!-- END nav -->
-
+    <!-- END .block-2 -->
+    <!-- END section -->
     <!-- END section -->
 
-    <section class="py-5 bg-light mt-5" id="section-about">
+    <section class="section contact-section" id="section-contact">
       <div class="container">
-        <div class="row align-items-center">
-          <div
-            class="col-md-12 col-lg-12 ml-auto order-lg-2 position-relative mb-5 text-center"
-            data-aos="fade-up"
-          >
-            <img
-              src="images/hero_4.jpg"
-              alt="Image"
-              class="img-fluid rounded w-75"
-            />
-          </div>
-
-          <div class="col-md-12 col-lg-12 order-lg-12 text-center" data-aos="fade-up">
-            <h2 class="heading mb-4">Hacienda Galea Resort</h2>
-            <p class="mb-5">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics, a
-              large language ocean.
-            </p>
-        
+        <div class="d-flex justify-content-center">
+          <div class="card shadow" style="width: 40rem">
+            <div class="card-body">
+              <div style="display: none" class="container text-sm" id="error">
+                <table class="table table-light">
+                  <thead>
+                    <tr>
+                      <td class="text-danger" align="center">
+                        <i class="fa fa-exclamation-circle"></i> Invalid
+                        Credentials!
+                      </td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <form id="mybooking_form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1"
+                    ><h4>Booking Reference:</h4></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    id="booking_reference"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter booking reference"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"><h4>Email:</h4></label>
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    id="booking_email"
+                    placeholder="Enter email"
+                    required
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">
+                    <h4 class="text-light">Submit</h4>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -144,6 +172,8 @@
       </div>
     </footer>
 
+    <!-- Modal -->
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -157,7 +187,51 @@
 
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.timepicker.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
     <script src="js/main1.js"></script>
   </body>
+
+  <script>
+    $(document).ready(() => {
+      $("#mybooking_form").submit((e) => {
+        e.preventDefault();
+        $.LoadingOverlay("show");
+        let booking_reference = e.target[0].value;
+        let email = e.target[1].value;
+
+        errorLogin = () => {
+          $("#error").css("display", "block");
+        };
+
+        setTimeout(function () {
+          $.LoadingOverlay("hide");
+          $.ajax({
+            url: "php_functions/my_booking/login.php",
+            data: "booking_reference=" + booking_reference + "&email=" + email,
+            type: "POST",
+            success: function (response) {
+              let guest_id = 0;
+              let reservation_id = 0;
+              if (response == '"0"') {
+                errorLogin();
+              } else {
+                JSON.parse(response).map((e) => {
+                  guest_id = e.guest_id;
+                  reservation_id = e.reservation_id;
+                  billing_id = e.billing_id;
+                });
+                sessionStorage.setItem("my_booking_billingid", billing_id);
+                sessionStorage.setItem("my_booking_guestid", guest_id);
+                sessionStorage.setItem(
+                  "my_booking_reservationid",
+                  reservation_id
+                );
+                window.location = "my_booking/mybooking.html";
+              }
+            },
+          });
+        }, 500);
+      });
+    });
+  </script>
 </html>

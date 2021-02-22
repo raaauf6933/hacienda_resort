@@ -42,10 +42,7 @@
       href="../../plugins/daterangepicker/daterangepicker.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="./datepicker_files/jquery.datepicker2.css"
-    />
+    <link rel="stylesheet" href="./datepicker_files/jquery.datepicker2.css" />
   </head>
   <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
@@ -232,19 +229,7 @@
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <div class="container-fluid">
-            <div class="row mb-2">
-              <div class="col-sm-6">
-                <h1>Blank Page</h1>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Blank Page</li>
-                </ol>
-              </div>
-            </div>
-          </div>
+         
           <!-- /.container-fluid -->
         </section>
 
@@ -258,19 +243,19 @@
             <div class="card-body">
               <div class="bread">
                 <div class="breadcrumb-pagination">
-                  <div class="active">
+                  <div class="completed">
                     <span>1</span>
                     <p>Select Dates</p>
                   </div>
-                  <div class="todo">
+                  <div class="completed">
                     <span>2</span>
-                    <p>Select Rooms</p>
+                    <p>Select completed</p>
                   </div>
-                  <div class="todo">
+                  <div class="completed">
                     <span>3</span>
                     <p>Guest Detail</p>
                   </div>
-                  <div class="todo">
+                  <div class="active">
                     <span>4</span>
                     <p>Review</p>
                   </div>
@@ -280,45 +265,129 @@
                   </div>
                 </div>
               </div>
-
               <div class="d-flex justify-content-center mt-2">
-                <div class="card" style="width: 40rem">
-                  <div class="card-body" style="background: #d8dfe5">
-                    <form id="date_sub">
-                      <div class="row">
-                        <div class="col-6">
-                          <label>From:</label>
-                          <input
-                            name="date"
-                            id="from"
-                            data-select="datepicker"
-                            style="font-size: 25px; font-weight: 500"
-                            class="form-control pl-2 text-center"
-                            placeholder="Enter check-in date"
-                            readonly
-                            required
-                          />
-                        </div>
-                        <div class="col-6">
-                          <label>To:</label>
-                          <input
-                            name="date"
-                            id="to"
-                            data-select="datepicker"
-                            style="font-size: 25px; font-weight: 500"
-                            class="form-control pl-2 text-center"
-                            placeholder="Enter check-out date"
-                            readonly
-                            required
-                          />
-                        </div>
-                        <div class="col-12 mt-3">
-                          <div class="d-flex justify-content-center">
-                            <button class="btn btn-primary">Submit</button>
-                          </div>
-                        </div>
+                <div class="card" style="width: 70rem;">
+                  <div class="invoice p-3 mb-3">
+                    <!-- title row -->
+                    <div class="row">
+                      <div class="col-12">
+                        <h4>
+                          <img
+                            src="../../../images/logo.png"
+                            style="height: 80px;"
+                            class="img-fluid"
+                          />Hacienda Galea Resort
+                          <!--<small class="float-right">Date: 2/10/2014</small>-->
+                        </h4>
                       </div>
-                    </form>
+                      <!-- /.col -->
+                    </div>
+                    <!-- info row -->
+                    <div class="row invoice-info text-center">
+                      <div class="col-sm-6 invoice-col">
+                        <h4>Guest Information</h4>
+                        <address>
+                          <strong id="guest_name"></strong><br />
+                          <p class="m-0">Address: <strong id="guest_address"></strong></p>
+                          <p class="m-0">
+                            Phone: <text id="guest_contact"></text>
+                          </p>
+                          <p class="m-0">
+                            Email: <text id="guest_email"></text>
+                          </p>
+                        </address>
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-6 invoice-col">
+                        <h4>Booking Information</h4>
+                        <address>
+                         <p class="m-0">Check-in: <strong id="check_in"></strong></p>
+                         <p class="m-0">Check-out: <strong id="check_out"></strong></p>
+                         <p class="m-0">No. Night(s): <strong id="nights"></strong></p>
+                         <p class="m-0">No. Guest: <strong id="guest_num"></strong></p>
+                        </address>
+                      </div>
+                      <!-- /.col -->
+                      <!--<div class="col-sm-4 invoice-col">
+                        <b>Invoice #007612</b><br />
+                        <br />
+                        <b>Order ID:</b> 4F3S8J<br />
+                        <b>Payment Due:</b> 2/22/2014<br />
+                        <b>Account:</b> 968-34567
+                      </div> -->
+                      <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- Table row -->
+                    <div class="row">
+                      <div class="col-12 table-responsive">
+                        <table id="invoice" class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Availed Room</th>
+                              <th>Rate</th>
+                              <th>Night(s)</th>
+                              <th>Qty</th>
+                              <th>Amount</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                          <tfoot>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th>Vatable Sales</th>
+                              <th id="vatable"></th>
+                            </tr>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th>VAT (12%)</th>
+                              <th id="vat"></th>
+                            </tr>
+                            <tr>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th>Sub Total</th>
+                              <th id="sub_total"></th>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                      <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+
+             
+                    <!-- this row will not appear when printing -->
+                    <div class="row no-print">
+                      <div class="col-12">
+                        <!-- <a
+                          href="../invoice_print/invoice-print.html"
+                          target="_blank"
+                          class="btn btn-default"
+                          ><i class="fas fa-print"></i> Print</a
+                        > -->
+                        <button
+                          type="button"
+                          class="btn btn-success float-right"
+                          id="confirm"
+                        >
+                          <i class="far fa-credit-card"></i> CONFIRM
+                        </button>
+                        <!--<button
+                          type="button"
+                          class="btn btn-primary float-right"
+                          style="margin-right: 5px;"
+                        >
+                          <i class="fas fa-download"></i> Generate PDF
+                        </button>-->
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -364,97 +433,17 @@
     <script src="../../plugins/datatables/jquery.dataTables.js"></script>
     <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 
-    <script src="../https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
     <script src="../../plugins/toastr/toastr.min.js"></script>
 
     <script src="./datepicker_files/jquery.datepicker2.js"></script>
+    <script src="./web_scripts/review_bookings.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    
   </body>
-
-  <script>
-    $(document).ready(function () {
-      if (sessionStorage.getItem("user_info") == null)
-        window.location = "../../../authentication/login.html";
-
-      $("#user_admin").html(
-        JSON.parse(sessionStorage.getItem("user_info")).name
-      );
-
-      error = () => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-        });
-
-        Toast.fire({
-          type: "error",
-          title: "Invalid input dates, please select again",
-        });
-      };
-
-      warning = () => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-        });
-
-        Toast.fire({
-          type: "warning",
-          title: "Minimum of 1 day bookings",
-        });
-      };
-
-      info = () => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-        });
-
-        Toast.fire({
-          type: "info",
-          title: "Please input booking date",
-        });
-      };
-
-      $("#date_sub").submit((e) => {
-        e.preventDefault();
-
-        console.log($("#from").val());
-        console.log($("#to").val());
-
-        if (
-          moment($("#from").val()).format("YYYY-MM-DD") >
-          moment($("#to").val()).format("YYYY-MM-DD")
-        ) {
-          error();
-        } else if ($("#from").val() == "" || $("#to").val() == "") {
-          info();
-        } else if (
-          moment($("#from").val()).format("YYYY-MM-DD") ==
-          moment($("#to").val()).format("YYYY-MM-DD")
-        ) {
-          warning();
-        } else {
-          //session_save
-          sessionStorage.setItem(
-            "walkin_checkin",
-            moment($("#from").val()).format("YYYY-MM-DD")
-          );
-          sessionStorage.setItem(
-            "walkin_checkout",
-            moment($("#to").val()).format("YYYY-MM-DD")
-          );
-
-          window.location = "./select_rooms.html";
-        }
-      });
-    });
-  </script>
 </html>

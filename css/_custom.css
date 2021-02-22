@@ -4,3 +4,104 @@
     color: #ffba5a;
     font-size: 60px;
 }
+
+.pool-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 70px 50px;
+    border: 2px solid  #ffba5a;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+}
+
+.section-heading.text-center .line- {
+    margin: 0 auto 40px;
+}
+
+.section-heading .line- {
+    width: 90px;
+    height: 2px;
+    background-color:  #ffba5a;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.section-heading.white h2, .section-heading.white p {
+    color: #ffffff;
+}
+
+.section-heading.white h2, .section-heading.white p {
+    color: #ffffff;
+}
+
+.pool-content .pool-feature {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.pool-content .pool-feature p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+
+.room-details-item {
+    margin-bottom: 50px;
+  }
+  
+  .room-details-item img {
+    margin-bottom: 40px;
+  }
+  
+  
+  .room-details-item .rd-text .rd-title {
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .room-details-item .rd-text .rd-title h3 {
+    color: #19191a;
+    float: left;
+  }
+  
+  .room-details-item .rd-text .rd-title .rdt-right {
+    float: right;
+    text-align: right;
+  }
+  
+  .room-details-item .rd-text h2 {
+    color: #ffba5a;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  
+  .room-details-item .rd-text h2 span {
+    font-family: "Cabin", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #19191a;
+  }
+  
+  .room-details-item .rd-text table {
+    margin-bottom: 32px;
+  }
+  
+  .room-details-item .rd-text table tbody tr td.r-o {
+    width: 120px;
+    color: #707079;
+  }
+  
+  .room-details-item .rd-text table tbody tr td {
+    font-size: 16px;
+    color: #19191a;
+    line-height: 36px;
+  }
