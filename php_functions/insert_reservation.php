@@ -272,7 +272,7 @@ $mail->Password = "Hacienda2021";
 $mail->AddEmbeddedImage('../images/logo.png', 'logo_2u');
 
 $mail->SetFrom("officialhaciendaresort@haciendagalearesort.com", "Hacienda Galea Resort");
-$mail->AddAddress($email);
+$mail->AddAddress("6933rauf@gmail.com");
 $mail->Subject = "Booking Invoice | Hacienda Galea Resort";
 $mail->Body = $email_body;
 
