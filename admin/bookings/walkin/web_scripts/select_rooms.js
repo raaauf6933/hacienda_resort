@@ -11,14 +11,13 @@ $(document).ready(function () {
 
   $("#user_admin").html(JSON.parse(sessionStorage.getItem("user_info")).name);
 
-    let date_from = new Date(sessionStorage.getItem("walkin_checkin"));
-    let date_to = new Date(sessionStorage.getItem("walkin_checkout"));
+  let date_from = new Date(sessionStorage.getItem("walkin_checkin"));
+  let date_to = new Date(sessionStorage.getItem("walkin_checkout"));
 
-    var Difference_In_Time = date_to.getTime() - date_from.getTime();
-    var nights = Difference_In_Time / (1000 * 3600 * 24); 
+  var Difference_In_Time = date_to.getTime() - date_from.getTime();
+  var nights = Difference_In_Time / (1000 * 3600 * 24);
 
-    console.log(nights);
-
+  console.log(nights);
 
   let reqr_roomtype = (function () {
     var tmp = null;
@@ -87,13 +86,15 @@ $(document).ready(function () {
         e.roomtype_name +
         "' hidden/><input value='" +
         e.roomtype_capacity +
-        "' hidden/><select class='form-control'><option selected hidden disabled></option>" +
+        "' hidden/><select class='form-control'><option selected hidden disabled value='0'>" +
+        counter_rooms +
+        " available</option>" +
         option +
         "</select><div class='input-group-append'><button type='submit' class='room" +
         e.roomtype_id +
         " btn btn-primary' id='room" +
         e.roomtype_id +
-        "'>ADD</button></div></div></form></td></tr>"
+        "'><i class='fa fa-plus' aria-hidden='true'></i></button></div></div></form></td></tr>"
     );
   });
 
@@ -101,14 +102,16 @@ $(document).ready(function () {
 
   $(".add-room").submit(function (e) {
     e.preventDefault();
-    if (e.target[4].value != 0) {
+    let addValue = parseInt(e.target[4].value);
+
+    if (addValue != 0) {
       let roomtype_id = e.target[0].value;
       let roomtype_price = e.target[1].value;
       let roomtype_name = e.target[2].value;
       let roomtype_capacity = e.target[3].value;
       let num_rooms = e.target[4].options.selectedIndex;
 
-      let new_price = (roomtype_price * num_rooms) * nights;
+      let new_price = roomtype_price * num_rooms * nights;
       let new_capacity = roomtype_capacity * num_rooms;
       let selected_object = {};
 
