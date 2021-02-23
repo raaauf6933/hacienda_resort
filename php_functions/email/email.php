@@ -8,20 +8,21 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
 
 $mail->CharSet = "UTF-8";
-$mail->Host = "smtp.gmail.com";
+$mail->Host = "sg2plzcpnl453268.prod.sin2.secureserver.net";
+//$mail->SMTPAutoTLS = false; 
 $mail->SMTPDebug = 1;
-$mail->Port = 465; //465 or 587
+$mail->Port = 25; //465 or 587
 
-$mail->SMTPSecure = 'ssl';
+$mail->SMTPSecure = 'tsl';
 $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 
 //Authentication
-$mail->Username = "haciendagalearesort@gmail.com";
-$mail->Password = "Haciendaresort2021";
+$mail->Username = "officialhaciendaresort@haciendagalearesort.com";
+$mail->Password = "Hacienda2021";
 
 //Set Params
-$mail->SetFrom("haciendagalearesort@gmail.com","Hacienda Galea Resort");
+$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com","Hacienda Galea Resort");
 $mail->AddAddress("6933rauf@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = '<html>
