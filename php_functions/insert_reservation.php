@@ -255,10 +255,10 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
 
 $mail->CharSet = "UTF-8";
-$mail->Host = "sg2plzcpnl453268.prod.sin2.secureserver.net";
+$mail->Host = "smtpout.secureserver.net";
 //$mail->SMTPAutoTLS = false; 
 $mail->SMTPDebug = 1;
-$mail->Port = 25; //465 or 587
+$mail->Port = 465; //465 or 587
 
 $mail->SMTPSecure = 'tsl';
 $mail->SMTPAuth = true;
@@ -273,7 +273,6 @@ $mail->AddEmbeddedImage('../images/logo.png', 'logo_2u');
 
 $mail->SetFrom("officialhaciendaresort@haciendagalearesort.com", "Hacienda Galea Resort");
 $mail->AddAddress($email);
-$mail->AddCC("officialhaciendaresort@haciendagalearesort.com");
 $mail->Subject = "Booking Invoice | Hacienda Galea Resort";
 $mail->Body = $email_body;
 
