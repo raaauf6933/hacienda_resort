@@ -8,7 +8,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
 
 $mail->CharSet = "UTF-8";
-$mail->Host = "smtp.gmail.com";
+$mail->Host = "smtpout.secureserver.net";
 $mail->SMTPDebug = 1;
 $mail->Port = 465; //465 or 587
 
@@ -17,12 +17,12 @@ $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 
 //Authentication
-$mail->Username = "crackersh323@gmail.com";
-$mail->Password = "Hansel2020";
+$mail->Username = "officialhaciendaresort@haciendagalearesort.com";
+$mail->Password = "Hacienda2021";
 
 //Set Params
-$mail->SetFrom("crackersh323@gmail.com");
-$mail->AddAddress("fairfieldsresort2020@gmail.com");
+$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com","Hacienda Galea Resort");
+$mail->AddAddress("6933rauf@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = '<html>
 <style>
