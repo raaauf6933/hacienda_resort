@@ -228,7 +228,7 @@ $email_body = '<html>
         <td colspan="5" style="color: #6b6b6b;">* Payment is available only for Bank Deposit</td>
        
     </tr>
-    <tr> <td colspan="5" style="color: #6b6b6b;">* Deposit your 50% Downpayment to bank, <br/>and upload your picture of bank receipt here <a href="http://fairfieldsresort.com/my_booking.html" target="_blank">My Booking</a></td></tr>
+    <tr> <td colspan="5" style="color: #6b6b6b;">* Deposit your 50% Downpayment to bank, <br/>and upload your picture of bank receipt here <a href="http://haciendagalearesort.com/myBooking.html" target="_blank">My Booking</a></td></tr>
     
     <tr>
         <td style="height: 1rem;"></td>
@@ -272,7 +272,7 @@ $mail->Password = "Hacienda2021";
 $mail->AddEmbeddedImage('../images/logo.png', 'logo_2u');
 
 $mail->SetFrom("officialhaciendaresort@haciendagalearesort.com", "Hacienda Galea Resort");
-$mail->AddAddress("6933rauf@gmail.com");
+$mail->AddAddress($email);
 $mail->Subject = "Booking Invoice | Hacienda Galea Resort";
 $mail->Body = $email_body;
 
