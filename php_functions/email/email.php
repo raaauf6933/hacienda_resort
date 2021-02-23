@@ -8,7 +8,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
 
 $mail->CharSet = "UTF-8";
-$mail->Host = "smtpout.secureserver.net";
+$mail->Host = "sg2plzcpnl453268.prod.sin2.secureserver.net";
 $mail->SMTPDebug = 1;
 $mail->Port = 465; //465 or 587
 
