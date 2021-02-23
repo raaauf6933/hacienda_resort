@@ -98,7 +98,7 @@ $email_body = '<html>
   <table style="max-width:670px;margin:50px auto 10px;background-color:#efefef;padding:50px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);-moz-box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24); border-top: solid 10px #ef7e24;     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
     <thead>
       <tr>
-        <th style="text-align:left;" colspan="4"><img style="max-width: 70px;" src="cid:logo_2u" ><strong> Fairfields Resort & Playhouse Inn.</strong></th>
+        <th style="text-align:left;" colspan="4"><img style="max-width: 70px;" src="cid:logo_2u" ><strong> Hacienda Galea Resort.</strong></th>
         <th style="text-align:right;font-weight:400;"></th>
       </tr>
     </thead>
@@ -224,7 +224,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
 
 $mail->CharSet = "UTF-8";
-$mail->Host = "sg3plcpnl0031.prod.sin3.secureserver.net";
+$mail->Host = "sg2plzcpnl453268.prod.sin2.secureserver.net";
 //$mail->SMTPAutoTLS = false; 
 $mail->SMTPDebug = 1;
 $mail->Port = 25; //465 or 587
@@ -234,16 +234,16 @@ $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 
 //Authentication
-$mail->Username = "desk.resort@fairfieldsresort.com";
-$mail->Password = "Fa2425dS";
+$mail->Username = "officialhaciendaresort@haciendagalearesort.com";
+$mail->Password = "Hacienda2021";
 
 //Set Params
-$mail->AddEmbeddedImage('../../../img/icon.png', 'logo_2u');
+$mail->AddEmbeddedImage('../../../images/logo.png', 'logo_2u');
 
-$mail->SetFrom("desk.resort@fairfieldsresort.com", "FairFields Resort & Playhouse Inn");
+$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com", "Hacienda Galea Resort");
 $mail->AddAddress($guest_email);
-$mail->AddCC("desk.resort@fairfieldsresort.com");
-$mail->Subject = "Booking Confirmation | Fairfields Resort & Playhouse Inn";
+$mail->AddCC("officialhaciendaresort@haciendagalearesort.com");
+$mail->Subject = "Booking Confirmation | Hacienda Galea Resort";
 $mail->Body = $email_body;
 
 $mail->Send();
