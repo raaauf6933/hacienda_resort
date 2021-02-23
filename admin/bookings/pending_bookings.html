@@ -690,10 +690,14 @@
           type: "POST",
           success: function (response) {
             console.log(response);
-            $("#modal-lg").modal("hide");
-            $(".loading").remove();
+           
           },
         });
+
+        setTimeout(() => {
+          $("#modal-lg").modal("hide");
+            $(".loading").remove();
+        }, 3000);
       };
 
       updateHigh = () => {
