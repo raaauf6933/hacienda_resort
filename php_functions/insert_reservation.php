@@ -255,7 +255,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 $mail->IsSMTP();
 
 $mail->CharSet = "UTF-8";
-$mail->Host = "sg2plzcpnl453268.prod.sin2.secureserver.net";
+$mail->Host = "smtp.gmail.com";
 //$mail->SMTPAutoTLS = false; 
 $mail->SMTPDebug = 1;
 $mail->Port = 465; //465 or 587
@@ -265,13 +265,13 @@ $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 
 //Authentication
-$mail->Username = "officialhaciendaresort@haciendagalearesort.com";
-$mail->Password = "Hacienda2021";
+$mail->Username = "haciendagalearesort@gmail.com";
+$mail->Password = "Haciendaresort2021";
 
 //Set Params
 $mail->AddEmbeddedImage('../images/logo.png', 'logo_2u');
 
-$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com", "Hacienda Galea Resort");
+$mail->SetFrom("haciendagalearesort@gmail.com", "Hacienda Galea Resort");
 $mail->AddAddress("6933rauf@gmail.com");
 $mail->Subject = "Booking Invoice | Hacienda Galea Resort";
 $mail->Body = $email_body;
