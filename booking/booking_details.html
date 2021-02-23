@@ -3,14 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>
-      Hacienda Galea Resort and Events Place | Booking Details
-    </title>
+    <title>Hacienda Galea Resort and Events Place | Booking Details</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="icon" href="../images/favicon.ico"  type="image/png">
+    <link rel="icon" href="../images/favicon.ico" type="image/png" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -44,13 +42,14 @@
     >
       <div class="container">
         <img
-        style="width: 4em"
-        class="img-fluid m-1"
-        src="../images/logo1.png"
-      />
-      <a class="navbar-brand" href="index.html"
-      ><span class="text-warning">Hacienda Galea Resort</span><br>and Events Place</a
-    >
+          style="width: 4em"
+          class="img-fluid m-1"
+          src="../images/logo1.png"
+        />
+        <a class="navbar-brand" href="index.html"
+          ><span class="text-warning">Hacienda Galea Resort</span><br />and
+          Events Place</a
+        >
         <div
           class="site-menu-toggle js-site-menu-toggle ml-auto"
           data-aos="fade"
@@ -124,177 +123,177 @@
           </div>
         </div>
         <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <h3>Review your booking</h3>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3>Review your booking</h3>
+              </div>
+              <div class="card-body p-0">
+                <div class="row pb-5 p-5">
+                  <div class="col-md-4">
+                    <p class="font-weight-bold mb-4">Guest Information</p>
+                    <p class="mb-1" id="guest_name">
+                      John Doe, Mrs Emma Downson
+                    </p>
+
+                    <p class="mb-1" id="guest_address">Berlin, Germany</p>
+                    <p class="mb-1" id="guest_contact">6781 45P</p>
+                    <p class="mb-1" id="guest_email"></p>
+                  </div>
+
+                  <div class="col-md-4">
+                    <p class="font-weight-bold mb-4">Booking Details</p>
+                    <p class="mb-1">
+                      <span class="text-muted">Check-in: </span>
+                      <b id="check_in"></b>
+                    </p>
+                    <p class="mb-1">
+                      <span class="text-muted">Check-out: </span>
+                      <b id="check_out"></b>
+                    </p>
+                    <p class="mb-1">
+                      <span class="text-muted">No. Night(s): </span>
+                      <b id="nights"></b>
+                    </p>
+                    <p class="mb-1">
+                      <span class="text-muted">No. Guest: </span>
+                      <b id="guest_num"></b>
+                    </p>
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <p class="font-weight-bold mb-4">Resort Details</p>
+                    <p class="mb-1">Hacienda Galea resort</p>
+                    <p class="mb-1">
+                      <span class="text-muted">VAT ID: </span> 10253642
+                    </p>
+                    <p class="mb-1">
+                      <span class="text-muted">Payment Type: </span> Root
+                    </p>
+                    <p class="mb-1">
+                      <span class="text-muted">Name: </span> John Doe
+                    </p>
+                  </div>
                 </div>
-                <div class="card-body p-0">
-                  <div class="row pb-5 p-5">
-                    <div class="col-md-4">
-                      <p class="font-weight-bold mb-4">Guest Information</p>
-                      <p class="mb-1" id="guest_name">
-                        John Doe, Mrs Emma Downson
-                      </p>
-  
-                      <p class="mb-1" id="guest_address">Berlin, Germany</p>
-                      <p class="mb-1" id="guest_contact">6781 45P</p>
-                      <p class="mb-1" id="guest_email"></p>
-                    </div>
-  
-                    <div class="col-md-4">
-                      <p class="font-weight-bold mb-4">Booking Details</p>
-                      <p class="mb-1">
-                        <span class="text-muted">Check-in: </span>
-                        <b id="check_in"></b>
-                      </p>
-                      <p class="mb-1">
-                        <span class="text-muted">Check-out: </span>
-                        <b id="check_out"></b>
-                      </p>
-                      <p class="mb-1">
-                        <span class="text-muted">No. Night(s): </span>
-                        <b id="nights"></b>
-                      </p>
-                      <p class="mb-1">
-                        <span class="text-muted">No. Guest: </span>
-                        <b id="guest_num"></b>
-                      </p>
-                    </div>
-                    <div class="col-md-4 text-right">
-                      <p class="font-weight-bold mb-4">Resort Details</p>
-                      <p class="mb-1">Hacienda Galea resort</p>
-                      <p class="mb-1">
-                        <span class="text-muted">VAT ID: </span> 10253642
-                      </p>
-                      <p class="mb-1">
-                        <span class="text-muted">Payment Type: </span> Root
-                      </p>
-                      <p class="mb-1">
-                        <span class="text-muted">Name: </span> John Doe
-                      </p>
-                    </div>
+
+                <div class="row p-5">
+                  <div class="col-md-12">
+                    <table class="table" id="invoice">
+                      <thead>
+                        <tr>
+                          <th
+                            class="border-0 text-uppercase small font-weight-bold"
+                          >
+                            Availed Room
+                          </th>
+                          <th
+                            class="border-0 text-uppercase small font-weight-bold"
+                          >
+                            Rate
+                          </th>
+                          <th
+                            class="border-0 text-uppercase small font-weight-bold"
+                          >
+                            Night(s)
+                          </th>
+                          <th
+                            class="border-0 text-uppercase small font-weight-bold"
+                          >
+                            Quantity
+                          </th>
+                          <th
+                            class="border-0 text-uppercase small font-weight-bold"
+                          >
+                            Amount
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody id="#invoice"></tbody>
+                      <tfoot>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th>Vatable Sales</th>
+                          <th id="vatable"></th>
+                        </tr>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th>VAT (12%)</th>
+                          <th id="vat"></th>
+                        </tr>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th>Sub Total</th>
+                          <th id="sub_total"></th>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
-  
-                  <div class="row p-5">
-                    <div class="col-md-12">
-                      <table class="table" id="invoice">
-                        <thead>
-                          <tr>
-                            <th
-                              class="border-0 text-uppercase small font-weight-bold"
-                            >
-                              Availed Room
-                            </th>
-                            <th
-                              class="border-0 text-uppercase small font-weight-bold"
-                            >
-                              Rate
-                            </th>
-                            <th
-                              class="border-0 text-uppercase small font-weight-bold"
-                            >
-                              Night(s)
-                            </th>
-                            <th
-                              class="border-0 text-uppercase small font-weight-bold"
-                            >
-                              Quantity
-                            </th>
-                            <th
-                              class="border-0 text-uppercase small font-weight-bold"
-                            >
-                              Amount
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody id="#invoice"></tbody>
-                        <tfoot>
-                          <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Vatable Sales</th>
-                            <th id="vatable"></th>
-                          </tr>
-                          <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>VAT (12%)</th>
-                            <th id="vat"></th>
-                          </tr>
-                          <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>Sub Total</th>
-                            <th id="sub_total"></th>
-                          </tr>
-                        </tfoot>
-                      </table>
-                    </div>
+                </div>
+
+                <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                  <div class="py-3 px-5 text-right">
+                    <div class="mb-2">Total Amount</div>
+                    <div class="h2 font-weight-light" id="total_amount"></div>
                   </div>
-  
-                  <div class="d-flex flex-row-reverse bg-dark text-white p-4">
-                    <div class="py-3 px-5 text-right">
-                      <div class="mb-2">Total Amount</div>
-                      <div class="h2 font-weight-light" id="total_amount"></div>
-                    </div>
-  
-                    <!-- <div class="py-3 px-5 text-right">
+
+                  <!-- <div class="py-3 px-5 text-right">
                       <div class="mb-2">Discount</div>
                       <div class="h2 font-weight-light">10%</div>
                     </div> -->
-  
-                    <div class="py-3 px-5 text-right">
-                      <div class="mb-2">Downpayment Amount</div>
-                      <div class="h2 font-weight-light" id="downpayment"></div>
-                    </div>
+
+                  <div class="py-3 px-5 text-right">
+                    <div class="mb-2">Downpayment Amount</div>
+                    <div class="h2 font-weight-light" id="downpayment"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-2">
-              <div class="invoice-note">
-                <div class="row">
-                  <div class="col-xl-6 col-lg-12">
-                    <h4>HOW TO PAY ?</h4>
-                    <p>
-                      * Payment is available only for Bank Deposit <br />
-                      * After Confirming, You will receive an Email w/ Booking
-                      Number<br />
-                      * Deposit your 50% Downpayment to bank, and upload your bank
-                      receipt<br />
-                      <a
-                        class="text-primary"
-                        href="https://haciendagalearesort.com/myBookings.html"
-                        >(click here to find your booking using your booking
-                        number and email)</a
-                      ><br />
-                      * Wait your booking status to be confirmed.
-                    </p>
-                  </div>
-                  <div class="col-xl-6 col-lg-12">
-                    <h4>POLICY CONDITIONS</h4>
-                    <p>
-                      * You need to pay your 50% downpayment before 24hours or<br />
-                      the reservation will be voided<br />
-                      * Payment is strictly 50% downpayment only<br />
-                      to be the reservation will be confirmed<br />
-                      * No refund.
-                    </p>
-                  </div>
+          </div>
+          <div class="col-12 mt-2">
+            <div class="invoice-note">
+              <div class="row">
+                <div class="col-xl-6 col-lg-12">
+                  <h4>HOW TO PAY ?</h4>
+                  <p>
+                    * Payment is available only for Bank Deposit <br />
+                    * After Confirming, You will receive an Email w/ Booking
+                    Number<br />
+                    * Deposit your 50% Downpayment to bank, and upload your bank
+                    receipt<br />
+                    <a
+                      class="text-primary"
+                      href="https://haciendagalearesort.com/myBookings.html"
+                      >(click here to find your booking using your booking
+                      number and email)</a
+                    ><br />
+                    * Wait your booking status to be confirmed.
+                  </p>
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                  <h4>POLICY CONDITIONS</h4>
+                  <p>
+                    * You need to pay your 50% downpayment before 24hours or<br />
+                    the reservation will be voided<br />
+                    * Payment is strictly 50% downpayment only<br />
+                    to be the reservation will be confirmed<br />
+                    * No refund.
+                  </p>
                 </div>
               </div>
             </div>
-  
-            <div class="col-12 mt-2">
-              <div class="invoice-footer">
-                <button class="btn btn-primary btn-lg btn-block" id="confirm">
-                  CONFIRM
-                </button>
-                <!--  <p class="text-center m-b-5 f-w-600">
+          </div>
+
+          <div class="col-12 mt-2">
+            <div class="invoice-footer">
+              <button class="btn btn-primary btn-lg btn-block" id="confirm">
+                CONFIRM
+              </button>
+              <!--  <p class="text-center m-b-5 f-w-600">
                   THANK YOU FOR YOUR BUSINESS
                 </p>
                 <p class="text-center">
@@ -311,14 +310,11 @@
                     rtiemps@gmail.com</span
                   >
                 </p>-->
-              </div>
             </div>
           </div>
-     
+        </div>
       </div>
     </section>
-
-
 
     <footer class="section footer-section p-0">
       <div class="container">
@@ -378,7 +374,6 @@
         sessionStorage.getItem("guest_details") == null
       )
         window.location = "../index.html";
-
 
       let guest_details = JSON.parse(sessionStorage.getItem("guest_details"));
 
@@ -570,6 +565,10 @@
                 type: "POST",
                 success: function (response) {
                   localStorage.clear();
+                  console.log(response);
+                  if (response == "true") {
+                    window.location = "../index.html";
+                  }
                 },
               });
 
@@ -590,14 +589,13 @@
                 });
               }, 2100);
 
-              setTimeout(() => {
-                window.location = "../index.html";
-              }, 7100);
+              // setTimeout(() => {
+              //   window.location = "../index.html";
+              // }, 8100);
             }
           },
         });
       });
     });
   </script>
-
 </html>
