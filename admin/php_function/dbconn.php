@@ -1,7 +1,7 @@
 <?php
 
-$dbUsername = "hacienda_db";
-$dbPassword = "hacienda_db";
+$dbUsername = "root";
+$dbPassword = "";
 $dbServername = "localhost";
 $dbName = "hacienda_db";
 

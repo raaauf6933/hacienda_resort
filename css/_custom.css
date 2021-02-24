@@ -105,3 +105,16 @@
     color: #19191a;
     line-height: 36px;
   }
+
+  .pool-content .pool-feature {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.pool-content .pool-feature i {
+  font-size: 70px;
+  color: #ffba5a;
+  margin-bottom: 15px;
+  display: block;
+}
