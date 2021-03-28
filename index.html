@@ -664,6 +664,8 @@
     <script src="js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="admin/dist/js/update_expired_noshow.js"></script>
   </body>
 
   <script>
@@ -675,10 +677,21 @@
         let check_in = moment($("#checkin_date").val()).format("YYYY-MM-DD");
         let check_out = moment($("#checkout_date").val()).format("YYYY-MM-DD");
         //session_save
-        sessionStorage.setItem("checkin_date", check_in);
-        sessionStorage.setItem("checkout_date", check_out);
+        if (check_in != "Invalid date" && check_out != "Invalid date") {
+          //session_save
+          sessionStorage.setItem("checkin_date", check_in);
+          sessionStorage.setItem("checkout_date", check_out);
 
-        window.location = "booking/select_rooms.html";
+          window.location = "booking/select_rooms.html";
+        } else {
+          Swal.fire({
+            icon: "warning",
+            title: "Oops...",
+            text: "Something went wrong!, Please select dates",
+            timer: 5000,
+            showConfirmButton: true,
+          });
+        }
       });
       sessionStorage.clear();
     });
