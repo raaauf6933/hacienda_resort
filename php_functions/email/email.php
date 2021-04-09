@@ -22,7 +22,7 @@ $mail->Username = "officialhaciendaresort@haciendagalearesort.com";
 $mail->Password = "Hacienda2021";
 
 //Set Params
-$mail->SetFrom("officialhaciendaresort","Hacienda Galea Resort");
+$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com","Hacienda Galea Resort");
 $mail->AddAddress("6933rauf@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = '<html>
