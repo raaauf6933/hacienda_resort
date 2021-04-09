@@ -33,7 +33,7 @@ $mail->Body = '<html>
     <thead>
       <tr>
         <th style="text-align:left;" colspan="4"><img style="max-width: 70px;" src="cid:logo_2u" ><strong> Fairfields Resort & Playhouse Inn.</strong></th>
-        <th style="text-align:right;font-weight:400;">' . $reservation_date . '</th>
+        <th style="text-align:right;font-weight:400;">400</th>
       </tr>
     </thead>
     <tbody>
@@ -67,7 +67,7 @@ $mail->Body = '<html>
         <th  style="font-size:14px; padding:10px; border-bottom: 3px solid #929090; border-top:3px solid #929090 ;">Qty</th>
         <th  style="font-size:14px; padding:10px; border-bottom: 3px solid #929090; border-top:3px solid #929090 ;">Total Amount</th>
       </tr>
-      ' . $room_rows . '
+     
     </tbody>
     <tfooter>
       <tr style="text-align: center;">
@@ -76,7 +76,7 @@ $mail->Body = '<html>
           <td></td>
           <td style="font-size:14px;padding:10px 15px 0 15px;"><b>Vatable Sales</b></td>
         <td colspan="1" style="font-size:14px;padding:10px 15px 0 15px;">
-         Php ' . $vatable . '
+         Php
         </td>
       </tr>
         <tr style="text-align: center;">
@@ -85,7 +85,7 @@ $mail->Body = '<html>
           <td></td>
           <td style="font-size:14px;padding:10px 15px 0 15px;"><b>VAT (12%)</b></td>
         <td colspan="1" style="font-size:14px;padding:10px 15px 0 15px;">
-         Php ' . $vat . '
+         Php 
         </td>
       </tr>
         <tr style="text-align: center; ">
@@ -94,7 +94,7 @@ $mail->Body = '<html>
           <td></td>
           <td style="font-size:14px;padding:10px 15px 0 15px; /*border-bottom: 3px solid #929090;*/"><b>Subtotal</b></td>
         <td colspan="1" style="font-size:14px;padding:10px 15px 0 15px; /*border-bottom: 3px solid #929090;*/">
-         Php ' . $total_amount . '
+         Php 
         </td>
       </tr>
       
@@ -126,7 +126,7 @@ $mail->Body = '<html>
           <td></td>
           <td style="font-size:14px;padding:10px 15px 0 15px; /*border-bottom: 3px solid #929090;*/ color:navy"><b>Payed Amount</b></td>
         <td colspan="1" style="font-size:14px;padding:10px 15px 0 15px; /*border-bottom: 3px solid #929090;*/color:navy">
-         Php ' . $downpayment . '
+         Php
         </td>
       </tr>
       <tr style="text-align: center;  ">
@@ -135,7 +135,7 @@ $mail->Body = '<html>
           <td></td>
           <td style="font-size:14px;padding:10px 15px 0 15px; /*border-bottom: 3px solid #929090;*/ color:navy"><b>Balance</b></td>
         <td colspan="1" style="font-size:14px;padding:10px 15px 0 15px; /*border-bottom: 3px solid #929090;*/color:navy">
-         Php ' . $downpayment . '
+         Php 
         </td>
       </tr>
     </tfooter>
