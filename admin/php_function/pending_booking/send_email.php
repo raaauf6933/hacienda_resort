@@ -240,7 +240,7 @@ $mail->Password = "Hacienda2021";
 //Set Params
 $mail->AddEmbeddedImage('../../../images/logo.png', 'logo_2u');
 
-$mail->SetFrom("officialhaciendaresort", "Hacienda Galea Resort");
+$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com", "Hacienda Galea Resort");
 $mail->AddAddress($guest_email);
 $mail->AddCC("officialhaciendaresort@haciendagalearesort.com");
 $mail->Subject = "Booking Confirmation | Hacienda Galea Resort";
