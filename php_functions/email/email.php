@@ -18,11 +18,11 @@ $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 
 //Authentication
-$mail->Username = "officialhaciendaresort@haciendagalearesort.com";
+$mail->Username = "haciendaofficial@haciendagalearesort.com";
 $mail->Password = "Hacienda2021";
 
 //Set Params
-$mail->SetFrom("officialhaciendaresort@haciendagalearesort.com","Hacienda Galea Resort");
+$mail->SetFrom("haciendaofficial@haciendagalearesort.com","Hacienda Galea Resort");
 $mail->AddAddress("6933rauf@gmail.com");
 $mail->Subject = "Test";
 $mail->Body = '<html>
