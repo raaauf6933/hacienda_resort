@@ -496,7 +496,7 @@
 
     <script src="../plugins/sweetalert2/sweetalert2.min.js"></script>
     <script src="../plugins/toastr/toastr.min.js"></script>
-    <script src="../dist/js/update_expired_noshow.js"></script>
+ 
 
   </body>
 
@@ -513,6 +513,17 @@
         window.location = "../authentication/login.html";
       });
 
+
+      
+    $.ajax({
+        url: "../php_function/expired_noshow/update_booking.php",
+        type: "POST",
+        success: function (response) {
+
+        },
+    });
+
+    
 
       //get all pending bookings
       let table = $("#pending_booking").DataTable({

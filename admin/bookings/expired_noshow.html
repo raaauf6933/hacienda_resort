@@ -314,7 +314,7 @@
     <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="../dist/js/update_expired_noshow.js"></script>
+   
   </body>
 
   <script>
@@ -330,6 +330,17 @@
         window.location = "../authentication/login.html";
       });
       
+
+      $.ajax({
+        url: "../php_function/expired_noshow/update_booking.php",
+        type: "POST",
+        success: function (response) {
+
+        },
+    });
+
+
+    
 
       //get all pending bookings
       let table = $("#pending_booking").DataTable({
